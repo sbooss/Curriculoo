@@ -147,22 +147,60 @@
     }
     @keyframes scanMove { from { transform: translateY(0); } to { transform: translateY(100vh); } }
   @media print {
-      body {
-        background: #000;
-        color: #000;
-      }
-      .matrix-bg, .scan-line, .menu, .boot {
-        display: none !important;
-      }
-      .panel {
-        display: block !important;
-        border: none;
-        page-break-inside: avoid;
-      }
-      h1, h2 {
-        color: #000;
-        text-shadow: none;
-      }
+  * {
+    animation: none !important;
+    transition: none !important;
+    box-shadow: none !important;
+    text-shadow: none !important;
+  }
+
+  body {
+    background: #ffffff !important;
+    color: #000000 !important;
+  }
+
+  .matrix-bg,
+  .scan-line,
+  .boot,
+  .xp-bar,
+  .menu,
+  .close {
+    display: none !important;
+  }
+
+  .container {
+    padding: 0 !important;
+    text-align: left;
+  }
+
+  h1 {
+    letter-spacing: 2px;
+    color: #000 !important;
+  }
+
+  .role {
+    color: #000 !important;
+    font-weight: bold;
+    margin-bottom: 16px;
+  }
+
+  .panel {
+    display: block !important;
+    border: none !important;
+    padding: 0 !important;
+    margin: 0 0 24px 0 !important;
+    background: transparent !important;
+    page-break-inside: avoid;
+  }
+
+  .panel h2 {
+    color: #000 !important;
+    border-bottom: 1px solid #000;
+    padding-bottom: 4px;
+    margin-top: 24px;
+  }
+}
+
     }
   </style>
 </head>
@@ -252,12 +290,7 @@
     </div>
 
     
-      <p style="font-size:.85rem;opacity:.85; margin-top:12px;">Link direto:</p>
-      <p style="font-size:.85rem; color:var(--matrix); word-break:break-all;">https://williamnunes.dev</p>
-      <p style="font-size:.75rem;opacity:.7; margin-top:8px;">Ideal para PDF, LinkedIn, cartões digitais e apresentações.</p>
-      <div class="close" onclick="closePanels()">← retornar</div>
-    
-    </div>
+      
 
     <div class="panel" id="contato">
       <h2>Canais de Comunicação</h2>
